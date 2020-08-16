@@ -45,7 +45,7 @@ class FeatureSet(object):
         fp,ext = filepaths[self.index]
         sequences = defaultdict(str)
         missing_files = []
-           
+        
         for i, row in df.iterrows():
             v=(row['virus'])
             seqs = []
@@ -71,16 +71,14 @@ class FeatureSet(object):
                 sequences [v] = ''.join(seqs)
 #             if i%100  == 0:
 #                 print(i, filename,v,len(sequences[v]),sequences[v][:40])
-        #print(missing_files)
+
         return sequences
     
     def get_X(self,ds,seqs  ):
-
         X = self.extract_kmers(ds,seqs)
         mask = ds['trn/tst']=='train'
         X_train = X[mask,:]
         X_test = X[~mask,:]
-        
 
         scaler = StandardScaler()
         X_trn_std = scaler.fit_transform(X_train)
@@ -89,8 +87,7 @@ class FeatureSet(object):
         gram_tst = np.dot(X_tst_std, X_trn_std.T)
         return X,X_trn_std, X_tst_std,gram_train,gram_tst
     
-    def extract_kmers (self, df,sequences):
-      
+    def extract_kmers (self, df,sequences):        
         seq_index = []
        
         X = np.zeros((len(df) ,len(self.feature_names)))
@@ -106,6 +103,10 @@ class FeatureSet(object):
                 else:
                     X[len(seq_index)] = self.get_word_frequ (seq)
                 seq_index.append(v)
+            else:
+                from IPython.core.debugger import set_trace
+                set_trace()
+        
         # normalise for length of genome(s)
         XN = np.divide(X,X.sum(axis = 1)[:,None])
         return XN#,seq_index,f_index

@@ -49,18 +49,18 @@ class DataSet (object):
         if self.tt_split >0:
             self.trn_tst_split()
         print(self.ds.head())
-        self.fs = feature_sets
+        # NB 8-6-2020: commenting out because otherwise we retain the strings at the beginning of self.fs, which seems to 
+        # cause problems later.
+        #self.fs = feature_sets
+        self.fs =[] # NB added and removed from else in below if statement
         if feature_sets:
             print('Adding feature sets ',feature_sets)
-            self.addFeatureSets(feature_sets)
-        else:
-            self.fs =[]
-            
+            self.addFeatureSets(feature_sets)            
         
     def printX(self):
         print('this is an instance method')
         
-    def get_class_lists(self,ss,vhDB):
+    def get_class_lists(self,ss,vhDB):        
         """ returns a dataframe virus,y,refseqs"""    
     
         (label,label_tax,pool,pool_tax,baltimore) = ss
@@ -253,8 +253,7 @@ class DataSet (object):
         refs = {r:i  for i, rs in enumerate (self.ds ['refseqs'])for r in rs }
         todrop = set([refs[r]for r in missing])
         self.ds.drop(todrop,axis=0 ,inplace = True)
-        return 
-         
+        return        
                     
     def trn_tst_split(self,  validation = False):
         """ use sk learn to get stratified train test split and add a col for trn/tst/val
@@ -273,8 +272,13 @@ class DataSet (object):
         
     def addFeatureSets(self,f_sets):
         for fs in f_sets:
-            print('adding fs',fs)
-            self.fs.append(FeatureSet(self.ds, fs,self.filepaths))
+            # NB 8-6-2020: Without this if statement, we will continue adding feature set
+            # objects to self.fs and this loop will reach a feature set object after exhausting the original strings in the 
+            # f_sets variable. Then it will no longer make sense to continue adding to the list (the constructo will fail). 
+            # This logic is corrected now.
+            if type(fs) == str:
+                print('adding fs',fs)
+                self.fs.append(FeatureSet(self.ds, fs,self.filepaths))
             
     def results2CSV(self,results, subset, csvfile):
         (label,label_tax,pool,pool_tax,balt) = subset

@@ -1,0 +1,41 @@
+label,label_tax,pool_label,pool_tax,holdout,Baltimore,N,features,k,AUC,Acc,Spec,Sens,Prec,TP,TN,FP,FN
+Homo sapiens,species,Hominidae,family,,all,80,DNA,1,0.47,0.5,0.0,1.0,0.5,10,0,10,0
+Homo sapiens,species,Hominidae,family,,all,80,DNA,2,0.8,0.85,0.9,0.8,0.11,8,9,1,2
+Homo sapiens,species,Hominidae,family,,all,80,DNA,3,0.88,0.9,0.9,0.9,0.1,9,9,1,1
+Homo sapiens,species,Hominidae,family,,all,80,DNA,4,0.88,0.85,0.8,0.9,0.18,9,8,2,1
+Homo sapiens,species,Hominidae,family,,all,80,DNA,5,0.9,0.9,0.8,1.0,0.17,10,8,2,0
+Homo sapiens,species,Hominidae,family,,all,80,DNA,6,0.92,0.8,0.7,0.9,0.25,9,7,3,1
+Homo sapiens,species,Hominidae,family,,all,80,DNA,7,0.89,0.75,0.7,0.8,0.27,8,7,3,2
+Homo sapiens,species,Hominidae,family,,all,80,DNA,8,0.89,0.8,0.6,1.0,0.29,10,6,4,0
+Homo sapiens,species,Hominidae,family,,all,80,DNA,9,0.87,0.8,0.9,0.7,0.12,7,9,1,3
+Homo sapiens,species,Hominidae,family,,all,80,AA,1,0.735,0.7,0.9,0.5,0.17,5,9,1,5
+Homo sapiens,species,Hominidae,family,,all,80,AA,2,0.01,0.75,0.5,1.0,0.33,10,5,5,0
+Homo sapiens,species,Hominidae,family,,all,80,AA,3,0.89,0.75,0.8,0.7,0.22,7,8,2,3
+Homo sapiens,species,Hominidae,family,,all,80,AA,4,0.98,0.85,1.0,0.7,0.0,7,10,0,3
+Homo sapiens,species,Hominidae,family,,all,80,PC,1,0.7,0.6,0.6,0.6,0.4,6,6,4,4
+Homo sapiens,species,Hominidae,family,,all,80,PC,2,0.8,0.65,0.5,0.8,0.38,8,5,5,2
+Homo sapiens,species,Hominidae,family,,all,80,PC,3,0.71,0.7,0.6,0.8,0.33,8,6,4,2
+Homo sapiens,species,Hominidae,family,,all,80,PC,4,0.52,0.65,0.6,0.7,0.36,7,6,4,3
+Homo sapiens,species,Hominidae,family,,all,80,PC,5,0.9,0.7,0.9,0.5,0.17,5,9,1,5
+Homo sapiens,species,Hominidae,family,,all,80,PC,6,0.94,0.7,0.9,0.5,0.17,5,9,1,5
+Homo sapiens,species,Hominidae,family,,all,80,Domains,0,0.94,0.85,0.9,0.8,0.11,8,9,1,2
+Canidae,family,Carnivora,order,,all,106,DNA,1,0.286,0.67,0.64,0.69,0.36,9,9,5,4
+Canidae,family,Carnivora,order,,all,106,DNA,2,0.374,0.44,0.29,0.62,0.56,8,4,10,5
+Canidae,family,Carnivora,order,,all,106,DNA,3,0.681,0.74,0.79,0.69,0.25,9,11,3,4
+Canidae,family,Carnivora,order,,all,106,DNA,4,0.72,0.63,0.64,0.62,0.38,8,9,5,5
+Canidae,family,Carnivora,order,,all,106,DNA,5,0.747,0.63,0.57,0.69,0.4,9,8,6,4
+Canidae,family,Carnivora,order,,all,106,DNA,6,0.747,0.67,0.5,0.85,0.39,11,7,7,2
+Canidae,family,Carnivora,order,,all,106,DNA,7,0.819,0.59,0.43,0.77,0.44,10,6,8,3
+Canidae,family,Carnivora,order,,all,106,DNA,8,0.632,0.56,0.43,0.69,0.47,9,6,8,4
+Canidae,family,Carnivora,order,,all,106,DNA,9,0.863,0.63,0.36,0.92,0.43,12,5,9,1
+Canidae,family,Carnivora,order,,all,106,AA,1,0.709,0.7,0.57,0.85,0.35,11,8,6,2
+Canidae,family,Carnivora,order,,all,106,AA,2,0.445,0.52,0.43,0.62,0.5,8,6,8,5
+Canidae,family,Carnivora,order,,all,106,AA,3,0.615,0.52,0.5,0.54,0.5,7,7,7,6
+Canidae,family,Carnivora,order,,all,106,AA,4,0.698,0.63,0.36,0.92,0.43,12,5,9,1
+Canidae,family,Carnivora,order,,all,106,PC,1,0.566,0.48,0.5,0.46,0.54,6,7,7,7
+Canidae,family,Carnivora,order,,all,106,PC,2,0.462,0.52,0.5,0.54,0.5,7,7,7,6
+Canidae,family,Carnivora,order,,all,106,PC,3,0.665,0.74,0.79,0.69,0.25,9,11,3,4
+Canidae,family,Carnivora,order,,all,106,PC,4,0.681,0.67,0.64,0.69,0.36,9,9,5,4
+Canidae,family,Carnivora,order,,all,106,PC,5,0.698,0.56,0.5,0.62,0.47,8,7,7,5
+Canidae,family,Carnivora,order,,all,106,PC,6,0.736,0.59,0.5,0.69,0.44,9,7,7,4
+Canidae,family,Carnivora,order,,all,106,Domains,0,0.648,0.63,0.5,0.77,0.41,10,7,7,3
